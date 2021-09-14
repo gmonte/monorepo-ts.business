@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "business",
+  "license": "MIT",
+  "author": "Guilherme Monte <gmonte@inf.ufsm.br>",
+  "description": "Monorepo builded by typescript for business",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/core/*"
+    ]
+  },
+  "scripts": {
+    "lint": "lerna run --parallel lint --",
+    "pre:release": "lerna version --no-commit-hooks --conventional-prerelease",
+    "release": "lerna version --no-commit-hooks --conventional-graduate",
+    "release:fix": "lerna version patch --no-commit-hooks",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@design-system/eslint-config": "^0.1.0",
+    "@design-system/ts-config": "^0.1.0",
+    "@types/styled-components": "^5.1.14",
+    "commitizen": "^4.2.4",
+    "cz-lerna-changelog": "^2.0.3",
+    "dots-env": "^1.0.14",
+    "husky": "^7.0.0",
+    "lerna": "^3.22.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "styled-components": "^5.3.1"
+  }
+}

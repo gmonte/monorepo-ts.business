@@ -1,0 +1,14 @@
+{
+  "extends": "@design-system/ts-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
